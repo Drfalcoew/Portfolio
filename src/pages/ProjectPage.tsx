@@ -1,9 +1,15 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ProjectPage = () => {
+
+    const location = useLocation();
+    const { title, image, description } = location.state;
+
     return (
         <div>
-            <h1>ProjectPage</h1>
+            {/* coming soon page */}
+            <h2>Coming Soon</h2>
         </div>
     );
 }

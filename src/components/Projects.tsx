@@ -3,6 +3,12 @@ import Item from '../reusable_components/Item';
 import { useNavigate } from 'react-router-dom';
 
 
+interface ProjectState {
+    title: string;
+    image: string;
+    description: string;
+}
+
 const Projects = () => {
 
     const nav = useNavigate();
@@ -27,14 +33,28 @@ const Projects = () => {
             src: "/projects/marketplace_ios.png",
             alt: "Marketplace iOS App",
             onClick: () => {
-                nav('/projects/marketplace')}
+                nav('/projects/marketplace', { 
+                    state: {
+                        title: 'Marketplace',
+                        image: '/projects/marketplace_ios.png',
+                        description: 'This is the description for Marketplace'
+                    } as ProjectState // Cast the object to ProjectState type
+                });
+            }
         },
         {
-            label: 'Gallery',
-            src: "/projects/fosters_estate.png",
-            alt: "My Art Gallery",
+            label: 'Sowing',
+            src: "/projects/sowing_2.webp",
+            alt: "Sowing App",
             onClick: () => {
-                nav('/gallery')}
+                nav('/projects/sowing', { 
+                    state: {
+                        title: 'Sowing',
+                        image: '/projects/sowing_2.webp',
+                        description: 'This is the description for Sowing'
+                    } as ProjectState // Cast the object to ProjectState type
+                });
+            }
         },
     ];
 

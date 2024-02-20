@@ -1,0 +1,120 @@
+
+  /* CONTACT COMPONENT */
+.contact-root-container {
+    display: flex;
+    width: 90%;
+    height: 65vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5vh 0;
+    flex-direction: row;
+    z-index: 1;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.background-pic {
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 0;
+    border-radius: 8px;
+    margin-right: 20px;
+    width: 20%;
+  }
+
+  .email-button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0;
+    max-width: 35vw; /* Set maximum width to control wrapping */
+}
+
+.email-button {
+    margin: 0 10px 20px !important;
+    padding: 10px 20px !important;
+    background-color: #37a267 !important;
+    color: var(--background-color) !important;
+}
+
+  .email-button:hover {
+    background-color: var(--accent-color) !important;
+    color: var(--background-color) !important;
+  }
+
+  /*  ABOUT COMPONENT */
+  .about-container {
+    display: flex;
+    flex: 1;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+
+  .about-container h1 {
+    margin-bottom: 0px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  }
+
+  .about-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icon-container {
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .social-icon-container:hover {
+    background-color: var(--accent-color);
+    transition: background-color 0.3s;
+  }
+
+  .social-icon {
+    display: flex;
+    width: 30px;
+  }
+  
+  .social-icon:hover {
+    color: var(--item-color);
+  }
+
+  .about-description {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 75%;
+  }

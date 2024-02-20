@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import { UserSettingsProvider } from './common/UserSettingsContext';
 import StyledGlobalStyles from './GlobalStyles';
 import ProjectPage from './pages/ProjectPage';
-import Contact from './pages/Contact';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
