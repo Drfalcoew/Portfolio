@@ -3,19 +3,13 @@
 .contact-root-container {
     display: flex;
     width: 90%;
-    height: 65vh;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 5vh 0;
-    flex-direction: row;
     z-index: 1;
-    background-color: transparent;
-    overflow: hidden;
+    justify-content: center;
 }
 
 .background-pic {
     opacity: 0.1;
-    position: absolute;
+    position: fixed; /* Fixed positioning for the background image */
     top: 0;
     left: 0;
     height: 100vh;
@@ -42,7 +36,6 @@
     flex-wrap: wrap; /* Allow buttons to wrap */
     justify-content: center; /* Center items horizontally */
     margin: 20px 0;
-    max-width: 35vw; /* Set maximum width to control wrapping */
 }
 
 .email-button {
@@ -117,4 +110,45 @@
     text-align: center;
     margin-bottom: 20px;
     width: 75%;
+  }
+
+  .about-content {
+    display: flex;
+    width: 90%;
+    height: 65vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5vh 0;
+    flex-direction: row;
+    z-index: 1;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      height: 100%;
+      overflow: scroll;
+    }
+  
+    .contact-container {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .about-container {
+      width: 100%;
+    }
+    
+    .about-description {
+      width: 90%;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      margin-top: 5vh;
+    }
   }

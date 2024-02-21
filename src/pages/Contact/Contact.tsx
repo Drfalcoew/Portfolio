@@ -26,17 +26,19 @@ const Contact = () => {
     return (
         <div className='contact-root-container'>
             <img src='/ethereal_2.webp' alt='background' className='background-pic' draggable="false" />
-            <About />
-            <div className='contact-container'>
-                <h2>Contact Me About:</h2>
-                <div className='email-button-container'>
-                    {emailButtonArray.map((button, index) => {
-                        return (
-                        <Button key={index} className='email-button'
-                        variant="contained" startIcon={button.icon} href={`mailto: ${email}?subject=${button.subject}`}>
-                            {button.label}
-                        </Button> 
-                    )})}
+            <div className='about-content'>
+                <About />
+                <div className='contact-container'>
+                    <h2>Contact Me About:</h2>
+                    <div className='email-button-container'>
+                        {emailButtonArray.map((button, index) => {
+                            return (
+                            <Button key={index} className='email-button'
+                            variant="contained" startIcon={button.icon} href={`mailto: ${email}?subject=${button.subject}`}>
+                                {button.label}
+                            </Button> 
+                        )})}
+                    </div>
                 </div>
             </div>
         </div>

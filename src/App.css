@@ -28,12 +28,12 @@
 }
 
 .home-title-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-width: 100%;
-margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .home-title {
@@ -63,7 +63,7 @@ margin-bottom: 20px;
   }
 
   .home-title {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
   }
 
   .home-title-container {
@@ -384,7 +384,11 @@ margin-bottom: 20px;
     display: flex;
     width: 90vw;
     justify-content: space-evenly; /* Center the grid items horizontally */
+    display: flex;
+    justify-content: center;
   }
+
+
   /* ITEM COMPONENT */
 
   .item-container {
@@ -418,4 +422,43 @@ margin-bottom: 20px;
     margin: 2vh 0;
     font-size: 1.5rem;
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 768px) {
+    .projects-container {
+      overflow-y: scroll;
+      height: 100vh;
+      scrollbar-width: none;
+      padding: 10vh 0;
+    }
+
+    .MuiGrid-root .MuiGrid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      padding-top: 10px !important;
+    }
+
+    .item-container {
+      width: 50vw;
+      height: 37vw;
+      overflow: hidden;
+    }
+
+    .item-label {
+      font-size: 1.1rem;
+      margin: 0.8vh 0;
+    }
+
+    .item-image {
+      overflow: hidden;
+    }
+
+    .home-title-container {
+      margin-bottom: 0;
+    }
+    
+    
   }

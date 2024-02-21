@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
   .item-container {
     background-color: ${(props) => (props.darkMode ? '#181a1f' : '#ededed')};
   }
+  .footer-container {
+    background-color: ${(props) => (props.darkMode ? '#1E2128' : '#C5C5C5')};
+  }
 `;
 
 const StyledGlobalStyles = () => {

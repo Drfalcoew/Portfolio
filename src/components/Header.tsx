@@ -7,6 +7,7 @@ import '../App.css';
 const Header = () => {
     const { state, dispatch } = useUserSettings();
     const nav = useNavigate();
+    const isMobile = window.innerWidth < 768;
 
     return (
         <div className="header-container">
@@ -15,7 +16,7 @@ const Header = () => {
                 <button className='contact-me-btn' onClick={() => {
                         nav('/contact')
                     }} >
-                        Contact Me
+                        {isMobile ? 'Contact' : 'Contact Me'}
                     </button>
             </div>
             <div className="header-container-right">
