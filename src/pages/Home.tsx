@@ -4,6 +4,7 @@ import '../App.css';
 
 
 const Home = () => {
+
     return (
         <div className="home-container">
         <div className="home-title-container">

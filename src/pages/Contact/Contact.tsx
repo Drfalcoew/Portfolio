@@ -8,7 +8,7 @@ import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import './Contact.css';
 import About from './About';
-
+import ReactGA from 'react-ga';
 
 const Contact = () => {
     const email = 'drew.ng3nuity@gmail.com';
@@ -33,7 +33,12 @@ const Contact = () => {
                     <div className='email-button-container'>
                         {emailButtonArray.map((button, index) => {
                             return (
-                            <Button key={index} className='email-button'
+                            <Button key={index} className='email-button' onClick={() => {
+                                ReactGA.event({
+                                    category: 'Contact',
+                                    action: `Clicked ${button.label}`
+                                });
+                            }}
                             variant="contained" startIcon={button.icon} href={`mailto: ${email}?subject=${button.subject}`}>
                                 {button.label}
                             </Button> 

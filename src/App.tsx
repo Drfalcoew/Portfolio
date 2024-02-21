@@ -7,8 +7,17 @@ import { UserSettingsProvider } from './common/UserSettingsContext';
 import StyledGlobalStyles from './GlobalStyles';
 import ProjectPage from './pages/ProjectPage';
 import Contact from './pages/Contact/Contact';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
+ReactGA.initialize('G-KGT5LD5SZQ');
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <BrowserRouter>
         <UserSettingsProvider>

@@ -1,6 +1,7 @@
 import { Grid } from '@mui/material';
 import Item from '../reusable_components/Item';
 import { useNavigate } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 
 interface ProjectState {
@@ -13,6 +14,10 @@ const Projects = () => {
 
     const nav = useNavigate();
 
+    const handleProjectClick = (data : ProjectState) => {
+        nav(`/projects/${data.title}`, { state: data });
+    }
+        
     const myProjectSites = [
         {
             label: 'Donum Robotum',
@@ -33,13 +38,7 @@ const Projects = () => {
             src: "/projects/marketplace_ios.png",
             alt: "Marketplace iOS App",
             onClick: () => {
-                nav('/projects/marketplace', { 
-                    state: {
-                        title: 'Marketplace',
-                        image: '/projects/marketplace_ios.png',
-                        description: 'This is the description for Marketplace'
-                    } as ProjectState // Cast the object to ProjectState type
-                });
+                handleProjectClick({title: 'Marketplace', image: '/projects/marketplace_ios.png', description: 'This is the description for Marketplace'});
             }
         },
         {
@@ -47,13 +46,7 @@ const Projects = () => {
             src: "/projects/sowing_2.webp",
             alt: "Sowing App",
             onClick: () => {
-                nav('/projects/sowing', { 
-                    state: {
-                        title: 'Sowing',
-                        image: '/projects/sowing_2.webp',
-                        description: 'This is the description for Sowing'
-                    } as ProjectState // Cast the object to ProjectState type
-                });
+                handleProjectClick({title: 'Sowing', image: '/projects/sowing_2.webp', description: 'This is the description for Sowing'});
             }
         },
     ];
@@ -69,7 +62,14 @@ const Projects = () => {
                                 label={project.label}
                                 src={project.src}
                                 alt={project.alt}
-                                onClick={project.onClick}
+                                onClick={() => {
+                                    project.onClick();
+                                    ReactGA.event({
+                                        category: 'Project',
+                                        action: 'Clicked on project',
+                                        label: project.label
+                                    });
+                                }}
                                 index={index}
                             />
                         </Grid>

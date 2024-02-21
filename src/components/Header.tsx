@@ -3,6 +3,7 @@ import LightMode from '@mui/icons-material/LightModeOutlined';
 import { useUserSettings } from '../common/UserSettingsContext';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
+import ReactGA from 'react-ga';
 
 const Header = () => {
     const { state, dispatch } = useUserSettings();
@@ -15,6 +16,10 @@ const Header = () => {
                 <Link to="/" className="header-item">Home</Link>
                 <button className='contact-me-btn' onClick={() => {
                         nav('/contact')
+                        ReactGA.event({
+                            category: 'Contact',
+                            action: 'Clicked Contact Me'
+                        });
                     }} >
                         {isMobile ? 'Contact' : 'Contact Me'}
                     </button>
