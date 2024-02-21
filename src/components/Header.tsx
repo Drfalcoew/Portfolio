@@ -3,7 +3,7 @@ import LightMode from '@mui/icons-material/LightModeOutlined';
 import { useUserSettings } from '../common/UserSettingsContext';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const Header = () => {
     const { state, dispatch } = useUserSettings();

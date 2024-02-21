@@ -8,7 +8,7 @@ import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import './Contact.css';
 import About from './About';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const Contact = () => {
     const email = 'drew.ng3nuity@gmail.com';

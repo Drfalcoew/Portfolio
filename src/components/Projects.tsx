@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import Item from '../reusable_components/Item';
 import { useNavigate } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 interface ProjectState {
