@@ -14,6 +14,10 @@ const Header = () => {
         <div className="header-container">
             <div className="header-container-left">
                 <Link to="/" className="header-item">Home</Link>
+                <a href='drew-resume.pdf' target='_blank' rel='noreferrer' className='header-item'>Resume</a>
+                
+            </div>
+            <div className="header-container-right">
                 <button className='contact-me-btn' onClick={() => {
                         nav('/contact')
                         ReactGA.event({
@@ -23,8 +27,6 @@ const Header = () => {
                     }} >
                         {isMobile ? 'Contact' : 'Contact Me'}
                     </button>
-            </div>
-            <div className="header-container-right">
                 {state.darkMode ? (
                     <DarkMode
                         className="header-item header-button"

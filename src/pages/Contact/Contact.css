@@ -28,6 +28,7 @@
     padding: 5vh 0;
     border-radius: 8px;
     margin-right: 20px;
+    margin-top: 10vh;
     width: 20%;
   }
 
@@ -109,13 +110,13 @@
   .about-description {
     text-align: center;
     margin-bottom: 20px;
-    width: 75%;
+    width: 95%;
   }
 
   .about-content {
     display: flex;
     width: 90%;
-    height: 65vh;
+    height: 75vh;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 5vh 0;
@@ -136,6 +137,7 @@
       width: 100%;
       margin-right: 0;
       margin-bottom: 20px;
+      margin-top: 0;
     }
   
     .about-container {
