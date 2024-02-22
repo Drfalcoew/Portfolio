@@ -38,7 +38,7 @@ const Projects = () => {
             src: "/projects/marketplace_ios.png",
             alt: "Marketplace iOS App",
             onClick: () => {
-                handleProjectClick({title: 'Marketplace', image: '/projects/marketplace_ios.png', description: 'This is the description for Marketplace'});
+                handleProjectClick({title: 'Marketplace', image: '/projects/marketplace_ios.png', description: 'Marketplace is a two-sided marketplace project that includes a customer-facing app and a merchant-facing app. It is built with Swift, Firebase, UIKit, and Stripe' });
             }
         },
         {
@@ -46,7 +46,7 @@ const Projects = () => {
             src: "/projects/sowing_2.webp",
             alt: "Sowing App",
             onClick: () => {
-                handleProjectClick({title: 'Sowing', image: '/projects/sowing_2.webp', description: 'This is the description for Sowing'});
+                handleProjectClick({title: 'Sowing', image: '/projects/sowing_vision.gif', description: 'Sowing is a goal setting app that helps you track your progress and stay motivated. It is built with Swift, Core Data, Core Animation, and UIKit'});
             }
         },
     ];

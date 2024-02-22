@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
   :root {
     --item-color: ${(props) => (props.darkMode ? '#e0e0e0' : '#282c34')};
     --accent-color: ${(props) => (props.accentColor)};
+    --text-color-2: ${(props) => (props.darkMode ? '#98999c' : '#565b66')};
   }
   /* other styles */
   .item-container {
