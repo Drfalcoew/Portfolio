@@ -18,6 +18,18 @@
     padding: 5%;
 }
 
+.project-image-paper {
+    object-fit: cover;
+    border-radius: 14px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project-image {
+    object-fit: cover;
+    height: 100%;
+}
+
 .project-info-container {
     display: flex;
     flex: 2;
@@ -30,15 +42,28 @@
 
 @media screen and (max-width: 768px) {
     .root-project-container {
-        margin-top: 20%;
+        margin-top: 15%;
         flex-direction: column;
+        height: 150vh;
     }
 
     .project-info-container {
         align-items: center;
         justify-content: flex-start;
         width: 100%;
+        text-align: center;
         flex: 1;
+    }
+
+    .project-images-container {
+        height: 50%;
+        padding: 5%;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .project-image-paper {
+        height: 100%;
     }
 }
 
@@ -51,16 +76,4 @@
 .project-description {
     font-size: 1.0em;
     color: var(--text-color-2);
-}
-
-.project-image-paper {
-    object-fit: cover;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.project-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
