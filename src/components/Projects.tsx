@@ -55,7 +55,7 @@ const Projects = () => {
             alt: "Mobile Games",
             onClick: () => {
                 handleProjectClick({title: 'Mobile Games', images: ['/projects/games/duckshot_anim.gif', '/projects/games/hungry_driver.gif'],
-                    description: 'I have developed a few mobile games using SpriteKit and Swift including Hungry Driver and DuckShot. They are both built with Swift, SpriteKit/Scenekit, and UIKit'});
+                    description: 'I have developed a few mobile games for iOS including Hungry Driver and DuckShot. They are both built with Swift, SpriteKit/Scenekit, and UIKit'});
             }
         },
         {
@@ -83,7 +83,6 @@ const Projects = () => {
                                 alt={project.alt}
                                 onClick={() => {
                                     if (project.disabled) {
-                                        project.label = "Under Construction";
                                         return;
                                     }
                                     project.onClick();
