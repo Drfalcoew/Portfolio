@@ -385,6 +385,7 @@
     justify-content: space-evenly; /* Center the grid items horizontally */
     display: flex;
     justify-content: center;
+    padding-left: 20px;
   }
 
 

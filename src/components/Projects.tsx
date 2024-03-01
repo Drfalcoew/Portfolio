@@ -60,11 +60,11 @@ const Projects = () => {
         },
         {
             label: 'RiRi\'s Jewelry',
-            src: "/icons/under_construction.webp",
+            src: "/projects/riris_jewelry.png",
             alt: "Storefront Website for RiRi's Jewelry",
-            disabled: true,
+            disabled: false,
             onClick: () => {
-                handleProjectClick({title: 'RiRi\'s Jewelry', images: [], description: 'RiRi\'s Jewelry is a storefront website for a jewelry store. It is built with HTML, CSS, and JavaScript'});
+                window.open('https://ririsjewelry.com/', '_blank', 'noopener noreferrer')
             }
         }
 
