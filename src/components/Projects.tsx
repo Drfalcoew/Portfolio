@@ -21,17 +21,33 @@ const Projects = () => {
     const myProjectSites = [
         {
             label: 'Donum Robotum',
-            src: "/projects/donbot_darkmode.jpg",
+            src: "/projects/donbot_darkmode.webp",
             alt: "DonBot DonumRobotum Deal Finder",
             onClick: () => {
                  window.open('https://donumrobotum.com/', '_blank', 'noopener noreferrer')}
             },
         {
             label: 'Foster`s Estate',
-            src: "/projects/fostersEstate/fosters_estate_cover.jpg",
+            src: "/projects/fostersEstate/fosters_estate_cover.webp",
             alt: "Fosters Estate Sale Service",
             onClick: () => {
                 window.open('https://fostersestate.com/', '_blank', 'noopener noreferrer')}
+        },
+        {
+            label: 'RiRi\'s Jewelry',
+            src: "/projects/riris_jewelry.png",
+            alt: "Storefront Website for RiRi's Jewelry",
+            disabled: false,
+            onClick: () => {
+                window.open('https://ririsjewelry.com/', '_blank', 'noopener noreferrer')
+            }
+        },
+        {
+            label: 'Lucrum Web',
+            src: "/projects/lucrumWeb/lucrum_web_cover.webp",
+            alt: "Lucrum Web digital marketing agency",
+            onClick: () => {
+                window.open('https://lucrumweb.com/', '_blank', 'noopener noreferrer')}
         },
         {
             label: 'Marketplace',
@@ -57,17 +73,7 @@ const Projects = () => {
                 handleProjectClick({title: 'Mobile Games', images: ['/projects/games/duckshot_anim.gif', '/projects/games/hungry_driver.gif'],
                     description: 'I have developed a few mobile games for iOS including Hungry Driver and DuckShot. They are both built with Swift, SpriteKit/Scenekit, and UIKit'});
             }
-        },
-        {
-            label: 'RiRi\'s Jewelry',
-            src: "/projects/riris_jewelry.png",
-            alt: "Storefront Website for RiRi's Jewelry",
-            disabled: false,
-            onClick: () => {
-                window.open('https://ririsjewelry.com/', '_blank', 'noopener noreferrer')
-            }
         }
-
     ];
 
 
