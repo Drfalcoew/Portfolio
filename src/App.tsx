@@ -9,6 +9,7 @@ import ProjectPage from './pages/ProjectPage';
 import Contact from './pages/Contact/Contact';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
+import StepperHome from './app/page';
 
 ReactGA.initialize('G-KGT5LD5SZQ');
 
@@ -28,6 +29,8 @@ function App() {
                 <Route path="/" Component={Home} />
                 <Route path="/contact" Component={Contact} />
                 <Route path="/projects/*" Component={ProjectPage} />
+                <Route path="*" element={<div>404</div>} />
+                <Route path="/stepper" Component={StepperHome} />
               </Routes>
               <Footer />
           </div>

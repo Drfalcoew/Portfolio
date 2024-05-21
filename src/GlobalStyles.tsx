@@ -28,6 +28,9 @@ const GlobalStyles = createGlobalStyle<GlobalStyleProps>`
   .footer-container {
     background-color: ${(props) => (props.darkMode ? '#1E2128' : '#C5C5C5')};
   }
+  .back-btn {
+    background-color: ${(props) => (props.darkMode ? '#282C34' : '#C5C5C5')};
+  }
 `;
 
 const StyledGlobalStyles = () => {

@@ -1,0 +1,132 @@
+.contact-form-outer-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 5;
+}
+
+.contact-form.active {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.contact-form-checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-form-checkbox {
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+.contact-form-label {
+    margin-bottom: 3px;
+    color: rgb(105, 105, 105);
+}
+
+.contact-form-field-group {
+    padding-left: 0.5rem;
+}
+
+.contact-form-field {
+    font-size: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #f6f9fc;
+    color: var(--text-color);
+    line-height: 1.375;
+    border: 1px solid;
+    border-color: var(--accent-color);
+    border-radius: .25rem;
+    width: calc(100% - 1rem);
+    padding: 0.25rem;
+}
+
+.contact-form-field:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.contact-form-field:hover {
+    background-color: var(--accent-color) + 20%;
+    color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.contact-form-single {
+    width: calc(100% - 1rem);
+}
+
+.contact-form-double {
+    flex-basis: calc(50%);
+}
+
+.contact-form-triple {
+    flex-basis: calc(33.3333%);
+}
+
+.contact-form-select {
+    font-size: 0.8rem;
+    min-height: 32px;
+    min-width: calc(100% - 0.5rem);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-btn {
+    background-color: #37a267;
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    margin: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.back-btn {
+    background-color: #C5C5C5;
+}
+
+.form-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transition: background-color 0.3s;
+  }
+  
+  .form-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.3s;
+  }
