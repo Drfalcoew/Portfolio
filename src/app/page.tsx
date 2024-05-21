@@ -33,11 +33,7 @@ export default function StepperHome() {
           setFormData(savedData);
       }
   }, []);
-
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
+  
   const handleUpdateFormData = (key: string, dataToCache: any) => {
       cacheService.set(key, dataToCache);
       setFormData(dataToCache);
