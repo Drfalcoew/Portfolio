@@ -29,6 +29,7 @@
     color: #333;
     font-size: 0.75rem;
     font-weight: 500;
+    min-width: calc(50%);
 }
 
 .contact-form-checkbox-group {
@@ -88,6 +89,7 @@
 
 .contact-form-triple {
     flex-basis: calc(33.3333%);
+    min-width: calc(33.3333%);
 }
 
 .contact-form-select {
