@@ -53,7 +53,7 @@ export default function StepperHome() {
 
       setLoading(true);
 
-      const apiUrl = 'https://8oaystfvkc.execute-api.us-west-1.amazonaws.com/Init/pets';
+      const apiUrl = 'https://gla7dxnn3l.execute-api.us-west-1.amazonaws.com/init/pets';
       // const localUrl = 'http://localhost:8080/api/form';
 
       // get the data from the cache
