@@ -20,12 +20,26 @@ const Projects = () => {
         
     const myProjectSites = [
         {
+            label: 'Thirst Wagon',
+            src: "/projects/thirstwagon.webp",
+            alt: "ThirstWagon",
+            onClick: () => {
+                     window.open('https://thirstwagon.com/', '_blank', 'noopener noreferrer')}
+            },
+        {
             label: 'Donum Robotum',
             src: "/projects/donbot_darkmode.webp",
             alt: "DonBot DonumRobotum Deal Finder",
             onClick: () => {
                  window.open('https://donumrobotum.com/', '_blank', 'noopener noreferrer')}
             },
+        {
+                    label: 'Lucrum Web',
+                    src: "/projects/lucrumWeb/lucrum_web_cover.webp",
+                    alt: "Lucrum Web digital marketing agency",
+                    onClick: () => {
+                        window.open('https://lucrumweb.com/', '_blank', 'noopener noreferrer')}
+                },
         {
             label: 'Foster`s Estate',
             src: "/projects/fostersEstate/fosters_estate_cover.webp",
@@ -41,13 +55,6 @@ const Projects = () => {
             onClick: () => {
                 window.open('https://ririsjewelry.com/', '_blank', 'noopener noreferrer')
             }
-        },
-        {
-            label: 'Lucrum Web',
-            src: "/projects/lucrumWeb/lucrum_web_cover.webp",
-            alt: "Lucrum Web digital marketing agency",
-            onClick: () => {
-                window.open('https://lucrumweb.com/', '_blank', 'noopener noreferrer')}
         },
         {
             label: 'Marketplace',
