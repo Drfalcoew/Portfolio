@@ -10,6 +10,12 @@ interface ProjectState {
     description: string;
 }
 
+// in Projects.tsx
+const openExternal = (url: string) => () => {
+  const w = window.open(url, '_blank');   // user-gesture only (from onClick)
+  if (w) w.opener = null;                 // noopener for safety
+};
+
 const Projects = () => {
 
     const nav = useNavigate();
@@ -23,38 +29,32 @@ const Projects = () => {
             label: 'Thirst Wagon',
             src: "/projects/thirstwagon.webp",
             alt: "ThirstWagon",
-            onClick: () => {
-                     window.open('https://thirstwagon.com/', '_blank', 'noopener noreferrer')}
+            onClick: openExternal('https://thirstwagon.com/'),
             },
         {
             label: 'Donum Robotum',
             src: "/projects/donbot_darkmode.webp",
             alt: "DonBot DonumRobotum Deal Finder",
-            onClick: () => {
-                 window.open('https://donumrobotum.com/', '_blank', 'noopener noreferrer')}
+            onClick: openExternal('https://donumrobotum.com/'),
             },
         {
-                    label: 'Lucrum Web',
-                    src: "/projects/lucrumWeb/lucrum_web_cover.webp",
-                    alt: "Lucrum Web digital marketing agency",
-                    onClick: () => {
-                        window.open('https://lucrumweb.com/', '_blank', 'noopener noreferrer')}
-                },
+            label: 'Lucrum Web',
+            src: "/projects/lucrumWeb/lucrum_web_cover.webp",
+            alt: "Lucrum Web digital marketing agency",
+            onClick: openExternal('https://lucrumweb.com/'),
+        },
         {
             label: 'Foster`s Estate',
             src: "/projects/fostersEstate/fosters_estate_cover.webp",
             alt: "Fosters Estate Sale Service",
-            onClick: () => {
-                window.open('https://fostersestate.com/', '_blank', 'noopener noreferrer')}
+            onClick: openExternal('https://fostersestate.com/')
         },
         {
             label: 'RiRi\'s Jewelry',
             src: "/projects/riris_jewelry.png",
             alt: "Storefront Website for RiRi's Jewelry",
             disabled: false,
-            onClick: () => {
-                window.open('https://ririsjewelry.com/', '_blank', 'noopener noreferrer')
-            }
+            onClick: openExternal('https://ririsjewelry.com/')
         },
         {
             label: 'Marketplace',

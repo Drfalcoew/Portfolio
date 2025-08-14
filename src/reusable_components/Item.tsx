@@ -1,40 +1,64 @@
+// src/reusable_components/Item.tsx
 import { useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 
 interface ItemProps {
-    label?: string;
-    src?: string;
-    alt?: string;
-    onClick: () => void;
-    index: number;
+  label?: string;
+  src?: string;
+  alt?: string;
+  onClick: () => void;
+  index: number;
+  disabled?: boolean;
 }
 
-const Item = ({ label, src, alt, onClick, index }: ItemProps) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
+const Item = ({ label, src, alt, onClick, index, disabled }: ItemProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-    useEffect(() => {
-        // Set a timeout to trigger the fade-in animation for each item independently
-        const timeoutId = setTimeout(() => {
-            setIsVisible(true);
-        }, index * 400); // Adjust the delay as needed
+  useEffect(() => {
+    const timeoutId = setTimeout(() => setIsVisible(true), index * 400);
+    return () => clearTimeout(timeoutId);
+  }, [index]);
 
-        // Clear the timeout when the component unmounts to avoid memory leaks
-        return () => clearTimeout(timeoutId);
-    }, [index]);
+  const handleClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    // Only proceed on *trusted* user actions
+    if (!e.isTrusted || disabled) return;
+    e.preventDefault();
+    e.stopPropagation();
+    onClick();
+  };
 
-    return (
-        <Box className="item-container" onClick={onClick} 
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)} 
-        style={{
-            opacity: isVisible ? 1 : 0,
-            boxShadow: isHovered ? '0 0 25px 4px var(--accent-color)' : '0 4px 8px rgba(0,0,0,0.3)',
-        }}>
-            <img src={src} alt={alt} className="item-image"/>
-            <div className="item-label">{label}</div>
-        </Box>
-    );
+  const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    if (disabled) return;
+    if ((e.key === 'Enter' || e.key === ' ') && e.isTrusted) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
+  return (
+    <Box
+      className="item-container"
+      role="button"
+      tabIndex={disabled ? -1 : 0}
+      aria-disabled={disabled ? 'true' : 'false'}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      sx={{
+        opacity: isVisible ? 1 : 0,
+        pointerEvents: isVisible ? 'auto' : 'none', // guard during fade-in
+        boxShadow: isHovered ? '0 0 25px 4px var(--accent-color)' : '0 4px 8px rgba(0,0,0,0.3)',
+        borderRadius: 2,
+        overflow: 'hidden',
+        outline: 'none',
+      }}
+    >
+      <img src={src} alt={alt} className="item-image" />
+      <div className="item-label">{label}</div>
+    </Box>
+  );
 };
 
 export default Item;
